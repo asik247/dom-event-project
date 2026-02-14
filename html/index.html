@@ -16,12 +16,32 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-
-    <h1 class="text-red-400 roboto-font">Hi this is dom event project now:-</h1>
+<body class="bg-[#f4f5f7]">
 
 
-
+    <!-- Login system code start here: -->
+    <section class="flex flex-col justify-center items-center h-[100vh] ">
+        <!-- bck img and img code here -->
+        <div class="bg-[url(/assest/bg.png)] bg-cover w-[300px] h-[100px] flex justify-center items-center">
+            <img src="/assest/Group.png" alt="">
+        </div>
+        <!-- form code -->
+        <form class="bg-white p-10 rounded-2xl">
+            <div class="mb-4">
+                <label for="">Mobile Number</label> <br />
+                <input id="phoneNumber" type="text" class="input bg-[#f4f5f7] rounded-2xl focus:outline-none"
+                    placeholder="Enter your number" />
+            </div>
+            <div class="mb-4">
+                <label for="">4 Digit Pin</label> <br />
+                <input id="pinNumber" type="text" class="input bg-[#f4f5f7] rounded-2xl focus:outline-none"
+                    placeholder="Enter 4 Digit pin" />
+            </div>
+            <button id="SecondaryBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white ">
+                Login
+            </button>
+        </form>
+    </section>
 
 
 
