@@ -73,7 +73,7 @@ btnCas.addEventListener("click", (e) => {
 let btnTransferMoney = document.getElementById("btnTransferMoney");
 btnTransferMoney.addEventListener("click", () => {
     // console.log("btnTransferMoney btn clicked");
-   let addAll = document.getElementById("addAll").style.display = "none"
+    let addAll = document.getElementById("addAll").style.display = "none"
     let getBAll = document.getElementById("getBAll").style.display = "none"
     let payBAll = document.getElementById("payBAll").style.display = "none"
     let casAll = document.getElementById("casAll").style.display = "none"
@@ -87,7 +87,7 @@ btnTransferMoney.addEventListener("click", () => {
 let btnGetBonus = document.getElementById("btnGetBonus");
 btnGetBonus.addEventListener("click", () => {
     // console.log("btnTransferMoney btn clicked");
-   let addAll = document.getElementById("addAll").style.display = "none"
+    let addAll = document.getElementById("addAll").style.display = "none"
     let payBAll = document.getElementById("payBAll").style.display = "none"
     let casAll = document.getElementById("casAll").style.display = "none"
     let transAll = document.getElementById("transAll").style.display = "none"
@@ -99,7 +99,7 @@ btnGetBonus.addEventListener("click", () => {
 let btnPayBill = document.getElementById("btnPayBill");
 btnPayBill.addEventListener("click", () => {
     // console.log("btnTransferMoney btn clicked");
-   let addAll = document.getElementById("addAll").style.display = "none"
+    let addAll = document.getElementById("addAll").style.display = "none"
     let casAll = document.getElementById("casAll").style.display = "none"
     let transAll = document.getElementById("transAll").style.display = "none"
     let transferAll = document.getElementById("transferAll").style.display = "none"
@@ -111,7 +111,7 @@ btnPayBill.addEventListener("click", () => {
 let btnTransactions = document.getElementById("btnTransactions");
 btnTransactions.addEventListener("click", () => {
     // console.log("btnTransferMoney btn clicked");
-   let addAll = document.getElementById("addAll").style.display = "none"
+    let addAll = document.getElementById("addAll").style.display = "none"
     let payBAll = document.getElementById("payBAll").style.display = "none"
     let casAll = document.getElementById("casAll").style.display = "none"
     let transferAll = document.getElementById("transferAll").style.display = "none"
@@ -120,3 +120,50 @@ btnTransactions.addEventListener("click", () => {
 
 })
 
+
+// Cash Out input field code start here;
+let casOutMoneyBtn = document.getElementById("casOutMoneyBtn");
+const gCashOutPin = "4321"
+casOutMoneyBtn.addEventListener("click", (e) => {
+    let wAmount = parseInt(document.getElementById("wAmount").value)
+    let agentNumber = document.getElementById("agentNumber").value
+    let casPinNumber = document.getElementById("casPinNumber").value.trim();
+    console.log(agentNumber);
+    let availableBalance = parseInt(document.getElementById("availableBalance").innerText);
+    
+    // Agent number validation code start here;
+    if (agentNumber.length < 11) {
+        alert("please provide 11 digit agent number");
+        return;
+    }
+    // cash out ammount validiton code start here;
+     if (isNaN(wAmount) || wAmount <= 0) {
+        alert("Enter a valid amount")
+        return;
+    }
+    // pin number condition code start here;
+    if (casPinNumber.length !== 4) {
+        alert("PIN must be 4 digits");
+        return;
+    }
+    if (gCashOutPin !== casPinNumber) {
+        alert("Incorrect pin")
+        return;
+    }
+    else {
+        alert("Withdrawo Amoutn Successfully")
+    }
+ 
+
+
+
+
+
+
+
+
+
+
+    const totalNewAvailableBalance = availableBalance - wAmount;
+    document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
+})
