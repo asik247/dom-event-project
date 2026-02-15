@@ -1,5 +1,6 @@
 // console.log("hi iam next page js file");
 // addMoneyBtn code start here;
+const gPinNumber = "1234"
 let addMoneyBtn = document.getElementById("addMoneyBtn");
 addMoneyBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -7,16 +8,26 @@ addMoneyBtn.addEventListener("click",(e)=>{
     let selectBank = document.getElementById("selectBank").value;
     let bankAccountNumber = document.getElementById("bankAccountNumber").value;
     let addAmount = parseInt(document.getElementById("addAmount").value)
-    let pinNumber = document.getElementById("pinNumber").value;
+    let pinNumber = document.getElementById("pinNumber").value.trim();
+    console.log(typeof(pinNumber));
     let availableBalance = parseInt(document.getElementById("availableBalance").innerText);
 
     // bankAccountNumber condiion code start here;
     if(bankAccountNumber.length < 11){
         alert("please provide 11 digit account number");
         return;
-    }else{
+    }
+    // pin number condition code start here;
+    if(pinNumber.length < 4){
+        alert("PIN must be 4 digits");
+        return;
+    }
+    if(gPinNumber !==pinNumber){
+        alert("Incorrect pin")
+        return;
+    }
+    else{
         alert("Add Amount Successfully")
-        // return;
     }
 
 
