@@ -19,12 +19,12 @@
 <body class="bg-[#f4f5f7]">
     <!-- Nav + article + section code start here -->
     <div class="max-w-lg mx-auto bg-white p-8">
-         <!-- nav code start here -->
+        <!-- nav code start here -->
         <nav class="flex justify-between items-center border-b-2 border-gray-300 p-3">
             <div class="leftDiv flex items-center">
                 <img src="/assest/payoo.png" alt="" class="w-[50px]">
                 <div class="title ml-2">
-                    <h2 class="roboto-font">$ <span>45000</span></h2>
+                    <h2 class="roboto-font">$ <span id="availableBalance">45000</span></h2>
                     <p class="text-gray">Available Balance</p>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                 <label for="">Amount to Add</label> <br />
                 <input id="addAmount" type="text"
                     class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
-                    placeholder="Add Amount to withdraw" />
+                    placeholder="Add Amount" />
             </div>
             <div>
                 <label for="">Pin Number</label> <br />
@@ -111,7 +111,7 @@
 
     </section>
     <!-- next js file added -->
-     <script src="/js/next.js"></script>
+    <script src="/js/next.js"></script>
 </body>
 
 </html>
