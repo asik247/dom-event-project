@@ -1,0 +1,1 @@
+console.log("hi iam next page js file");
