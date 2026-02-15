@@ -45,7 +45,7 @@ addMoneyBtn.addEventListener("click", (e) => {
     document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
 })
 
-// btn add toggoling code start here;
+// btn add toggoling code start here + btnAdd code:-
 let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", (e) => {
     let casAll = document.getElementById("casAll").style.display = "none"
@@ -83,4 +83,40 @@ btnTransferMoney.addEventListener("click", () => {
 
 
 })
-// Select A Bank code star here;
+// btnGetBonus code start here;
+let btnGetBonus = document.getElementById("btnGetBonus");
+btnGetBonus.addEventListener("click", () => {
+    // console.log("btnTransferMoney btn clicked");
+   let addAll = document.getElementById("addAll").style.display = "none"
+    let payBAll = document.getElementById("payBAll").style.display = "none"
+    let casAll = document.getElementById("casAll").style.display = "none"
+    let transAll = document.getElementById("transAll").style.display = "none"
+    let transferAll = document.getElementById("transferAll").style.display = "none"
+    let getBAll = document.getElementById("getBAll").style.display = "block"
+
+})
+// btnPayBill code start here;
+let btnPayBill = document.getElementById("btnPayBill");
+btnPayBill.addEventListener("click", () => {
+    // console.log("btnTransferMoney btn clicked");
+   let addAll = document.getElementById("addAll").style.display = "none"
+    let casAll = document.getElementById("casAll").style.display = "none"
+    let transAll = document.getElementById("transAll").style.display = "none"
+    let transferAll = document.getElementById("transferAll").style.display = "none"
+    let getBAll = document.getElementById("getBAll").style.display = "none"
+    let payBAll = document.getElementById("payBAll").style.display = "block"
+
+
+})
+let btnTransactions = document.getElementById("btnTransactions");
+btnTransactions.addEventListener("click", () => {
+    // console.log("btnTransferMoney btn clicked");
+   let addAll = document.getElementById("addAll").style.display = "none"
+    let payBAll = document.getElementById("payBAll").style.display = "none"
+    let casAll = document.getElementById("casAll").style.display = "none"
+    let transferAll = document.getElementById("transferAll").style.display = "none"
+    let getBAll = document.getElementById("getBAll").style.display = "none"
+    let transAll = document.getElementById("transAll").style.display = "block"
+
+})
+
