@@ -11,7 +11,7 @@ addMoneyBtn.addEventListener("click", (e) => {
     console.log(typeof (pinNumber));
     let availableBalance = parseInt(document.getElementById("availableBalance").innerText);
 
-       // ---- Bank Validation ----
+    // ---- Bank Validation ----
     let selectedBank = selectBank.value.trim();
     const options = Array.from(browsers.options).map(option => option.value.toLowerCase());
     if (!options.includes(selectedBank.toLowerCase())) {
@@ -48,13 +48,14 @@ addMoneyBtn.addEventListener("click", (e) => {
 // btn add toggoling code start here;
 let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", (e) => {
-    console.log("add btn clicked");
+    let casAll = document.getElementById("casAll").style.display = "none"
+    let addAll = document.getElementById("addAll").style.display = "block"
 })
 // btnCas code here now;
 let btnCas = document.getElementById("btnCas");
 btnCas.addEventListener("click", (e) => {
-    console.log("btnCas clicked");
-    window.location.href = "/html/cas.html"
+     let casAll = document.getElementById("casAll").style.display = "block"
+    let addAll = document.getElementById("addAll").style.display = "none"
 })
 
 // Select A Bank code star here;
