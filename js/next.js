@@ -49,13 +49,38 @@ addMoneyBtn.addEventListener("click", (e) => {
 let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", (e) => {
     let casAll = document.getElementById("casAll").style.display = "none"
+    let transferAll = document.getElementById("transferAll").style.display = "none"
+    let getBAll = document.getElementById("getBAll").style.display = "none"
+    let payBAll = document.getElementById("payBAll").style.display = "none"
+    let transAll = document.getElementById("transAll").style.display = "none"
     let addAll = document.getElementById("addAll").style.display = "block"
+
 })
 // btnCas code here now;
 let btnCas = document.getElementById("btnCas");
 btnCas.addEventListener("click", (e) => {
-     let casAll = document.getElementById("casAll").style.display = "block"
     let addAll = document.getElementById("addAll").style.display = "none"
+    let transferAll = document.getElementById("transferAll").style.display = "none"
+    let getBAll = document.getElementById("getBAll").style.display = "none"
+    let payBAll = document.getElementById("payBAll").style.display = "none"
+    let transAll = document.getElementById("transAll").style.display = "none"
+    let casAll = document.getElementById("casAll").style.display = "block"
+
+
 })
 
+// btnTransferMoney code here now;
+let btnTransferMoney = document.getElementById("btnTransferMoney");
+btnTransferMoney.addEventListener("click", () => {
+    // console.log("btnTransferMoney btn clicked");
+   let addAll = document.getElementById("addAll").style.display = "none"
+    let getBAll = document.getElementById("getBAll").style.display = "none"
+    let payBAll = document.getElementById("payBAll").style.display = "none"
+    let casAll = document.getElementById("casAll").style.display = "none"
+    let transAll = document.getElementById("transAll").style.display = "none"
+    let transferAll = document.getElementById("transferAll").style.display = "block"
+
+
+
+})
 // Select A Bank code star here;

@@ -52,7 +52,7 @@
                 <img src="/assest/send1.png" alt="" class="mx-auto mb-2">
                 <h3 class="roboto-font">Cash Out</h3>
             </div>
-            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+            <div id="btnTransferMoney" class="border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
                 <img src="/assest/money1.png" alt="" class="mx-auto mb-2">
                 <h3 class="roboto-font">Transfer Money</h3>
             </div>
@@ -137,7 +137,7 @@
         </form>
     </section>
     <!-- Transfer Money code here -->
-    <section id="transferAll" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
+    <section id="transferAll" style="display: none;" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
         <form class="form" id="transferForm">
             <h2 class="font-bold text-[20px] my-4">Transfer Money</h2>
             <div>
@@ -163,7 +163,7 @@
         </form>
     </section>
     <!-- Get Bonus code start here -->
-    <section id="getBAll" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
+    <section id="getBAll" style="display: none;" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
         <form class="form" id="getBonusForm">
             <h2 class="font-bold text-[20px] my-4">Get Bonus</h2>
             <div>
@@ -189,9 +189,9 @@
         </form>
     </section>
     <!-- Pay Bill code star here -->
-    <section id="casAll" style="display: none" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
-        <form class="form" id="cashOutForm">
-            <h2 class="font-bold text-[20px] my-4">Cash Out Money</h2>
+    <section id="payBAll" style="display: none;" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
+        <form class="form" id="payBForm">
+            <h2 class="font-bold text-[20px] my-4">Pay Bill</h2>
             <div>
                 <label for="">Agent Number </label> <br />
                 <input type="text" class="input w-full my-2 p-7 rounded-lg bg-[#f4f5f7] focus:outline-none"
@@ -214,9 +214,10 @@
             </button>
         </form>
     </section>
-    <section id="casAll" style="display: none" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
-        <form class="form" id="cashOutForm">
-            <h2 class="font-bold text-[20px] my-4">Cash Out Money</h2>
+    <!-- Transactions code start here -->
+    <section id="transAll" style="display: none;" class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
+        <form class="form" id="transForm">
+            <h2 class="font-bold text-[20px] my-4">Transactions Money</h2>
             <div>
                 <label for="">Agent Number </label> <br />
                 <input type="text" class="input w-full my-2 p-7 rounded-lg bg-[#f4f5f7] focus:outline-none"
