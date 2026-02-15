@@ -7,7 +7,7 @@ SecondaryBtn.addEventListener("click", (e) => {
     const gPin = 1234;
     let phoneNumber = document.getElementById("phoneNumber").value;
     let pinNumber = document.getElementById("pinNumber").value;
-
+    
     if (phoneNumber === "" || pinNumber === "") {
         alert("All fields are required.");
         return;
@@ -33,4 +33,6 @@ SecondaryBtn.addEventListener("click", (e) => {
         // console.log("invalid cadiential");
         alert("Invalid number or pin")
     }
+
+
 })
