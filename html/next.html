@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Page</title>
     <!-- css added -->
-     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- tailwind + daisy ui added -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -16,53 +16,100 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="max-w-lg mx-auto">
-   <!-- nav code start here -->
-    <nav class="flex justify-between items-center border-b-2 border-gray-300 p-3">
-        <div class="leftDiv flex items-center">
-            <img src="/assest/payoo.png" alt="" class="w-[50px]">
-            <div class="title ml-2">
-                <h2 class="roboto-font">$ <span>45000</span></h2>
-                <p class="text-gray">Avaiable Balance</p>
+<body class="bg-[#f4f5f7]">
+    <!-- Nav + article + section code start here -->
+    <div class="max-w-lg mx-auto bg-white p-8">
+         <!-- nav code start here -->
+        <nav class="flex justify-between items-center border-b-2 border-gray-300 p-3">
+            <div class="leftDiv flex items-center">
+                <img src="/assest/payoo.png" alt="" class="w-[50px]">
+                <div class="title ml-2">
+                    <h2 class="roboto-font">$ <span>45000</span></h2>
+                    <p class="text-gray">Available Balance</p>
+                </div>
             </div>
-        </div>
-        <div class="rightDiv">
-            <button class="btn text-gray"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-800"></i>Default</button>
-        </div>
-    </nav>
-    <!-- Some articale code start here -->
-     <article class="mt-8">
-        <h1 class="roboto-font text-[20px]">🔥Welcome to Payooo!</h1>
-        <p class="text-gray text-[15px]">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
-     </article>
-     <!-- card section code start here -->
-      <section class=" mt-14 grid grid-cols-3 gap-4">
-        <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
-            <img src="/assest/wallet1.png" alt="" class="mx-auto mb-2">
-            <h3 class="roboto-font">Add Money</h3>
-        </div>
-        <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
-            <img src="/assest/send1.png" alt="" class="mx-auto mb-2">
-            <h3 class="roboto-font">Cash Out</h3>
-        </div>
-        <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
-            <img src="/assest/money1.png" alt="" class="mx-auto mb-2">
-            <h3 class="roboto-font">Transfer Money</h3>
-        </div>
-        <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
-            <img src="/assest/bonus1.png" alt="" class="mx-auto mb-2">
-            <h3 class="roboto-font">Get Bonus</h3>
-        </div>
-        <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
-            <img src="/assest/purse1.png" alt="" class="mx-auto mb-2">
-            <h3 class="roboto-font">Pay Bill</h3>
-        </div>
-        <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
-            <img src="/assest/transaction1.png" alt="" class="mx-auto mb-2">
-            <h3 class="roboto-font">Transactions</h3>
-        </div>
-      </section>
+            <div class="rightDiv">
+                <button class="btn text-gray">
+                    <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-800"></i>
+                    Default
+                </button>
+            </div>
+        </nav>
+        <!-- article code start here -->
+        <article class="mt-8 px-3">
+            <h1 class="roboto-font text-[20px]">🔥Welcome to Payooo!</h1>
+            <p class="text-gray text-[15px]">
+                Enjoy easy and convenient financial services with us. Cashout charge is low and
+            </p>
+        </article>
+        <!-- card section code start here -->
+        <section class="mt-14 grid grid-cols-3 gap-4 p-3">
+            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+                <img src="/assest/wallet1.png" alt="" class="mx-auto mb-2">
+                <h3 class="roboto-font">Add Money</h3>
+            </div>
+            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+                <img src="/assest/send1.png" alt="" class="mx-auto mb-2">
+                <h3 class="roboto-font">Cash Out</h3>
+            </div>
+            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+                <img src="/assest/money1.png" alt="" class="mx-auto mb-2">
+                <h3 class="roboto-font">Transfer Money</h3>
+            </div>
+            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+                <img src="/assest/bonus1.png" alt="" class="mx-auto mb-2">
+                <h3 class="roboto-font">Get Bonus</h3>
+            </div>
+            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+                <img src="/assest/purse1.png" alt="" class="mx-auto mb-2">
+                <h3 class="roboto-font">Pay Bill</h3>
+            </div>
+            <div class="border-2 border-gray-300 text-center p-4 rounded-lg">
+                <img src="/assest/transaction1.png" alt="" class="mx-auto mb-2">
+                <h3 class="roboto-font">Transactions</h3>
+            </div>
+        </section>
 
+    </div>
+    <!-- Add Money code start here -->
+    <section class="max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
+        <form class="form" id="addMoneyForm">
+            <h2 class="font-bold text-[20px] my-4">Add Money</h2>
+            <div>
+                <label for="">Select A Bank</label> <br />
+                <input type="text" class="input w-full my-2 p-7 rounded-lg bg-[#f4f5f7] focus:outline-none"
+                    id="selectBank" placeholder="Select bank" list="browsers" />
+                <datalist id="browsers">
+                    <option value="Islami Bank"></option>
+                    <option value="PLC Bank"></option>
+                    <option value="Doch Bangla Bank"></option>
+                    <option value="AB Bank"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="">Bank Account Number</label> <br />
+                <input id="bankAccountNumber" type="text"
+                    class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
+                    placeholder="Enter 11 digit account number" />
+            </div>
+            <div>
+                <label for="">Amount to Add</label> <br />
+                <input id="addAmount" type="text"
+                    class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
+                    placeholder="Add Amount to withdraw" />
+            </div>
+            <div>
+                <label for="">Pin Number</label> <br />
+                <input id="pinNumber" type="text"
+                    class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
+                    placeholder="Enter 4 digit pin number" />
+            </div>
+            <button type="button" id="addMoneyBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white my-2 p-7">
+                Add Money
+            </button>
+        </form>
+
+    </section>
 </body>
 
 </html>
