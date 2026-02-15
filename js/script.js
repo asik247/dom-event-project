@@ -22,6 +22,9 @@ SecondaryBtn.addEventListener("click", (e) => {
         alert("PIN must be exactly 4 digits.");
         return;
     }
+    else{
+        alert("go next page")
+    }
 
     let phoneNumberValue = parseInt(phoneNumber)
     let pinNumberValue = parseInt(pinNumber);

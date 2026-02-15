@@ -17,8 +17,13 @@ addMoneyBtn.addEventListener("click",(e)=>{
         alert("please provide 11 digit account number");
         return;
     }
+    // Add amount condition code start here;
+    if(isNaN(addAmount) || addAmount <= 0){
+        alert("Enter a valid amount")
+        return;
+    }
     // pin number condition code start here;
-    if(pinNumber.length < 4){
+    if(pinNumber.length !== 4){
         alert("PIN must be 4 digits");
         return;
     }
