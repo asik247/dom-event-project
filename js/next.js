@@ -159,3 +159,4 @@ casOutMoneyBtn.addEventListener("click", (e) => {
 
 // just git commit code here;
 console.log("hi");
+alert("now transfer money code")
