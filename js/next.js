@@ -125,6 +125,7 @@ btnTransactions.addEventListener("click", () => {
 let casOutMoneyBtn = document.getElementById("casOutMoneyBtn");
 const gCashOutPin = "4321"
 casOutMoneyBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     let wAmount = parseInt(document.getElementById("wAmount").value)
     let agentNumber = document.getElementById("agentNumber").value
     let casPinNumber = document.getElementById("casPinNumber").value.trim();
@@ -156,7 +157,3 @@ casOutMoneyBtn.addEventListener("click", (e) => {
     const totalNewAvailableBalance = availableBalance - wAmount;
     document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
 })
-
-// just git commit code here;
-console.log("hi");
-alert("now transfer money code")
