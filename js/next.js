@@ -153,17 +153,9 @@ casOutMoneyBtn.addEventListener("click", (e) => {
     else {
         alert("Withdrawo Amoutn Successfully")
     }
- 
-
-
-
-
-
-
-
-
-
-
     const totalNewAvailableBalance = availableBalance - wAmount;
     document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
 })
+
+// just git commit code here;
+console.log("hi");
