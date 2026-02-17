@@ -119,7 +119,7 @@ btnTransactions.addEventListener("click", () => {
 })
 // btnTransactions code end here + toggling code end;
 
-// Reusable funk code start here;
+// Reusable funk code start here✅✅✅;
 function getInputFieldValueNumber(id) {
     return parseInt(document.getElementById(id).value);
 }
@@ -132,9 +132,7 @@ function getInnerText(id) {
 function setInnerText(value) {
     document.getElementById("availableBalance").innerText = value;
 }
-
 // Reusable funk code end here;
-
 // Btn Togglie Reusable funk code start here;
 function handleToggling(id) {
     const forms = document.getElementsByClassName("form2");
@@ -143,4 +141,7 @@ function handleToggling(id) {
     }
     document.getElementById(id).style.display = "block"
 }
-// Btn Togglie Reusable funk code end here;
+// Btn Togglie Reusable funk code end here✅✅✅;
+
+
+
