@@ -151,6 +151,8 @@ function handleToggling(id) {
     }
     document.getElementById(id).style.display = "block"
 }
+// Btn Togglie Reusable funk code end here;
+
 // clicked border active code start here;
 function activeBorder(id) {
     const cardBtn = document.getElementsByClassName("cardBtn");
