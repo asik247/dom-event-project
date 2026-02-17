@@ -91,31 +91,41 @@ casOutMoneyBtn.addEventListener("click", (e) => {
 let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", (e) => {
     handleToggling("addAll")
+    activeBorder("btnAdd")
 })
 // btnCas code here now;
 let btnCas = document.getElementById("btnCas");
 btnCas.addEventListener("click", (e) => {
     handleToggling("casAll")
+    activeBorder("btnCas")
+
 })
 // btnTransferMoney code here now;
 let btnTransferMoney = document.getElementById("btnTransferMoney");
 btnTransferMoney.addEventListener("click", () => {
     handleToggling("transferAll")
+    activeBorder("btnTransferMoney")
 })
 // btnGetBonus code start here;
 let btnGetBonus = document.getElementById("btnGetBonus");
 btnGetBonus.addEventListener("click", () => {
     handleToggling("getBAll")
+    activeBorder("btnGetBonus")
+
 })
 // btnPayBill code start here;
 let btnPayBill = document.getElementById("btnPayBill");
 btnPayBill.addEventListener("click", () => {
     handleToggling("payBAll")
+    activeBorder("btnPayBill")
+
 })
 // btnTransactions code start here
 let btnTransactions = document.getElementById("btnTransactions");
 btnTransactions.addEventListener("click", () => {
     handleToggling("transAll")
+    activeBorder("btnTransactions")
+
 })
 // btnTransactions code end here + toggling code end;
 
@@ -141,6 +151,18 @@ function handleToggling(id) {
     }
     document.getElementById(id).style.display = "block"
 }
+// clicked border active code start here;
+function activeBorder(id) {
+    const cardBtn = document.getElementsByClassName("cardBtn");
+    for (const btn of cardBtn) {
+        btn.classList.remove("border-[#16a34a]", "bg-[#16a34a0d]")
+        btn.classList.add("border-gray-300")
+
+    }
+    document.getElementById(id).classList.remove("border-gray-300");
+    document.getElementById(id).classList.add("border-[#16a34a]", "bg-[#16a34a0d]")
+}
+// clicked border active code end here;
 // Btn Togglie Reusable funk code end here✅✅✅;
 
 
