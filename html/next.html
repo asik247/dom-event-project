@@ -52,7 +52,8 @@
                 <img src="/assest/send1.png" alt="" class="mx-auto mb-2">
                 <h3 class="roboto-font">Cash Out</h3>
             </div>
-            <div id="btnTransferMoney" class="cardBtn border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
+            <div id="btnTransferMoney"
+                class="cardBtn border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
                 <img src="/assest/money1.png" alt="" class="mx-auto mb-2">
                 <h3 class="roboto-font">Transfer Money</h3>
             </div>
@@ -64,7 +65,8 @@
                 <img src="/assest/purse1.png" alt="" class="mx-auto mb-2">
                 <h3 class="roboto-font">Pay Bill</h3>
             </div>
-            <div id="btnTransactions" class="cardBtn border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
+            <div id="btnTransactions"
+                class="cardBtn border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
                 <img src="/assest/transaction1.png" alt="" class="mx-auto mb-2">
                 <h3 class="roboto-font">Transactions</h3>
             </div>
@@ -215,39 +217,21 @@
         </form>
     </section>
     <!-- Transactions code start here -->
-    <section id="transAll" style="display: none;" class="form2 max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
-        <!-- <form class="form" id="transForm">
-            <h2 class="font-bold text-[20px] my-4">Transactions Money</h2>
-            <div>
-                <label for="">Agent Number </label> <br />
-                <input type="text" class="input w-full my-2 p-7 rounded-lg bg-[#f4f5f7] focus:outline-none"
-                    id="agentNumber" placeholder="Enter 11 digit agent number" />
-            </div>
-            <div>
-                <label for="">Amount</label> <br />
-                <input id="wAmount" type="text"
-                    class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
-                    placeholder="Enter amount to withdrew" />
-            </div>
-            <div>
-                <label for="">Pin Number</label> <br />
-                <input id="casPinNumber" type="text"
-                    class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
-                    placeholder="Enter 4 digit pin number" />
-            </div>
-            <button type="button" id="casOutMoneyBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white my-2 p-7">
-                Withdraw Money
-            </button>
-        </form> -->
-
-        <div class="flex justify-between items-center ">
-           <h2 class="roboto-font text-[20px]"> Transaction History</h2>
+    <section id="transAll" style="display: none;" class="form2 max-w-lg mx-auto  p-8 rounded-lg mt-4">
+        <!-- history detials code start hre✅✅✅ -->
+        <div class="flex justify-between items-center bg-[#f4f5f7] mb-4 ">
+            <h2 class="roboto-font text-[20px]"> Transaction History</h2>
             <p class="text-gray">View All</p>
         </div>
-       
+
+        <div id="transactionContainer">
+           
+        </div>
+        <!-- history detials code end hre✅✅✅-->
     </section>
     <!-- next js file added -->
     <script src="/js/next.js"></script>
+
 </body>
 
 </html>

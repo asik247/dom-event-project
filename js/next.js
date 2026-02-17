@@ -2,6 +2,7 @@
 const gPinNumber = "1234"
 let selectBank = document.getElementById("selectBank");
 let browsers = document.getElementById("browsers");
+const array = []
 // Globaly declare code end here;
 
 // addMoneyBtn code start here;
@@ -45,7 +46,16 @@ addMoneyBtn.addEventListener("click", (e) => {
     }
     const totalNewAvailableBalance = addAmount + availableBalance;
     setInnerText(totalNewAvailableBalance);
-    // document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
+    // Transaction history code start here;
+    const data = {
+        name: "Add Money",
+        date: new Date().toLocaleTimeString()
+    }
+    array.push(data)
+    // console.log(array);
+
+
+    // Transaction history code end here;
 })
 // addMoneyBtn code end here;
 
@@ -64,7 +74,7 @@ casOutMoneyBtn.addEventListener("click", (e) => {
         return;
     }
     // cash out ammount validiton code start here;
-    if (isNaN(wAmount) || wAmount <= 0) {
+    if (isNaN(wAmount) || wAmount <= 0 || wAmount > 45000) {
         alert("Enter a valid amount")
         return;
     }
@@ -83,7 +93,16 @@ casOutMoneyBtn.addEventListener("click", (e) => {
     const totalNewAvailableBalance = availableBalance - wAmount;
     setInnerText(totalNewAvailableBalance);
 
-    // document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
+    // Transaction history code start here;
+    const data = {
+        name: "Cash Out",
+        date: new Date().toLocaleTimeString()
+    }
+    array.push(data)
+    // console.log(array);
+
+
+    // Transaction history code end here;
 })
 // Cash Out input field code end here;
 
@@ -127,7 +146,38 @@ btnTransactions.addEventListener("click", () => {
     activeBorder("btnTransactions")
 
 })
-// btnTransactions code end here + toggling code end;
+// btnTransactions code end here + toggling code end✅✅✅✅;
+document.getElementById("btnTransactions").addEventListener("click", () => {
+    console.log("btnTransactions clicked");
+    // console.log(array);
+    const transactionContainer = document.getElementById("transactionContainer");
+    transactionContainer.innerHTML = '';
+    for (const history of array) {
+        // console.log(history);
+        const div = document.createElement("div");
+        div.innerHTML = `
+         <div class="flex justify-between items-center bg-white p-4 rounded-lg mb-4">
+                <div class="flex justify-between items-center gap-4">
+                    <div class="bg-[#f4f5f7] rounded-full p-4">
+                        <img src="/assest/wallet1.png" alt="" class="mx-auto mb-2">
+                    </div>
+                    <div>
+                        <h2>${history.name}</h2>
+                        <p>${history.date}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-ellipsis rotate-180"></i>
+                </div>
+            </div>
+        
+        
+        
+        `
+        transactionContainer.appendChild(div)
+    }
+})
 
 // Reusable funk code start here✅✅✅;
 function getInputFieldValueNumber(id) {
