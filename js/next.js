@@ -8,15 +8,11 @@ let browsers = document.getElementById("browsers");
 let addMoneyBtn = document.getElementById("addMoneyBtn");
 addMoneyBtn.addEventListener("click", (e) => {
     e.preventDefault()
-
     let bankAccountNumber = getInputFieldValue("bankAccountNumber");
-
     let addAmount = getInputFieldValueNumber("addAmount");
-
     let pinNumber = getInputFieldValue("pinNumber");
-
-    let availableBalance = parseInt(document.getElementById("availableBalance").innerText);
-
+    let availableBalance = getInnerText("availableBalance");
+    // console.log(availableBalance);
     // ---- Bank Validation ----
     let selectedBank = selectBank.value.trim();
     const options = Array.from(browsers.options).map(option => option.value.toLowerCase());
@@ -48,7 +44,8 @@ addMoneyBtn.addEventListener("click", (e) => {
         alert("Add Amount Successfully")
     }
     const totalNewAvailableBalance = addAmount + availableBalance;
-    document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
+    setInnerText(totalNewAvailableBalance);
+    // document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
 })
 // addMoneyBtn code end here;
 
@@ -58,14 +55,9 @@ const gCashOutPin = "4321"
 casOutMoneyBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let wAmount = getInputFieldValueNumber("wAmount")
-
     let agentNumber = getInputFieldValue("agentNumber");
-
-
     let casPinNumber = getInputFieldValue("casPinNumber")
-
-    let availableBalance = parseInt(document.getElementById("availableBalance").innerText);
-
+    let availableBalance =getInnerText("availableBalance");
     // Agent number validation code start here;
     if (agentNumber.length < 11) {
         alert("please provide 11 digit agent number");
@@ -89,7 +81,9 @@ casOutMoneyBtn.addEventListener("click", (e) => {
         alert("Withdrawo Amoutn Successfully")
     }
     const totalNewAvailableBalance = availableBalance - wAmount;
-    document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
+    setInnerText(totalNewAvailableBalance);
+
+    // document.getElementById("availableBalance").innerText = totalNewAvailableBalance;
 })
 // Cash Out input field code end here;
 
@@ -181,6 +175,13 @@ function getInputFieldValueNumber(id) {
 function getInputFieldValue(id) {
     return document.getElementById(id).value;
 }
+function getInnerText(id) {
+    return parseInt(document.getElementById(id).innerText)
+}
+function setInnerText(value){
+    document.getElementById("availableBalance").innerText = value;
+}
+
 // Reusable funk code end here;
 
 // Btn Togglie Reusable funk code start here;
