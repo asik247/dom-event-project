@@ -4,7 +4,6 @@ let selectBank = document.getElementById("selectBank");
 let browsers = document.getElementById("browsers");
 const array = []
 // Globaly declare code end here;
-
 // addMoneyBtn code start here;
 let addMoneyBtn = document.getElementById("addMoneyBtn");
 addMoneyBtn.addEventListener("click", (e) => {
@@ -74,8 +73,12 @@ casOutMoneyBtn.addEventListener("click", (e) => {
         return;
     }
     // cash out ammount validiton code start here;
-    if (isNaN(wAmount) || wAmount <= 0 || wAmount > 45000) {
+    if (isNaN(wAmount) || wAmount <= 0) {
         alert("Enter a valid amount")
+        return;
+    }
+    if (wAmount > availableBalance) {
+        alert("Insuficient blance")
         return;
     }
     // pin number condition code start here;
@@ -148,7 +151,7 @@ btnTransactions.addEventListener("click", () => {
 })
 // btnTransactions code end here + toggling code end✅✅✅✅;
 document.getElementById("btnTransactions").addEventListener("click", () => {
-    console.log("btnTransactions clicked");
+    // console.log("btnTransactions clicked");
     // console.log(array);
     const transactionContainer = document.getElementById("transactionContainer");
     transactionContainer.innerHTML = '';
@@ -171,9 +174,6 @@ document.getElementById("btnTransactions").addEventListener("click", () => {
                     <i class="fa-solid fa-ellipsis rotate-180"></i>
                 </div>
             </div>
-        
-        
-        
         `
         transactionContainer.appendChild(div)
     }
@@ -214,6 +214,9 @@ function activeBorder(id) {
     document.getElementById(id).classList.remove("border-gray-300");
     document.getElementById(id).classList.add("border-[#16a34a]", "bg-[#16a34a0d]")
 }
+document.addEventListener("DOMContentLoaded",function(){
+    activeBorder("btnAdd")
+})
 // clicked border active code end here;
 // Btn Togglie Reusable funk code end here✅✅✅;
 
