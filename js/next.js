@@ -158,12 +158,18 @@ btnPayBill.addEventListener("click", () => {
 // btnTransactions code start here
 let btnTransactions = document.getElementById("btnTransactions");
 btnTransactions.addEventListener("click", () => {
-    // console.log("btnTransferMoney btn clicked");
-    let addAll = document.getElementById("addAll").style.display = "none"
-    let payBAll = document.getElementById("payBAll").style.display = "none"
-    let casAll = document.getElementById("casAll").style.display = "none"
-    let transferAll = document.getElementById("transferAll").style.display = "none"
-    let getBAll = document.getElementById("getBAll").style.display = "none"
+    let addAll = getDisplayNone("addAll");
+    
+    let payBAll = getDisplayNone("payBAll");
+
+    let casAll = getDisplayNone("casAll");
+
+    let transferAll = getDisplayNone("transferAll");
+
+    let getBAll = getDisplayNone("getBAll");
+    
+    // console.log(addAll,payBAll,casAll,transferAll,getBAll);
+
     let transAll = document.getElementById("transAll").style.display = "block"
 
 })
@@ -177,4 +183,9 @@ function getInputFieldValue(id) {
     return document.getElementById(id).value;
 }
 // Reusable funk code end here;
-console.log("break time");
+
+// Btn Togglie Reusable funk code start here;
+function getDisplayNone (id){
+    return document.getElementById(id).style.display = "none";
+}
+// Btn Togglie Reusable funk code end here;
