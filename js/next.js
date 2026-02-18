@@ -108,10 +108,26 @@ casOutMoneyBtn.addEventListener("click", (e) => {
 
 // Transfer Money Input field code start hre;
 let transferMoneyBtn = document.getElementById("transferMoneyBtn");
-transferMoneyBtn.addEventListener("click",(e)=>{
+transferMoneyBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("transferMoneyBtn clicked now");
+    let resiverNumber = tGetInputNumber("resiverNumber")
+    let tAmount = tGetInputNumber("tAmount");
+    let rCode = tGetInputNumber("rCode")
+    let tPinNumber = tGetInputNumber("tPinNumber")
+    let availableBalance = tGetInnerText("availableBalance")
+    let totalAvailableBalance = availableBalance - tAmount;
+    tSetInnerTex(totalAvailableBalance);
 })
+// transferMoneyBtn Reusable funk code;
+function tGetInputNumber(id) {
+    return parseInt(document.getElementById(id).value)
+}
+function tGetInnerText(id) {
+    return parseInt(document.getElementById(id).innerText)
+}
+function tSetInnerTex(value){
+   return document.getElementById("availableBalance").innerText = value;
+}
 // Transfer Money Input field code end hre;
 
 // btn add toggoling code start here + btnAdd code:-
@@ -219,7 +235,7 @@ function activeBorder(id) {
     document.getElementById(id).classList.remove("border-gray-300");
     document.getElementById(id).classList.add("border-[#16a34a]", "bg-[#16a34a0d]")
 }
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function () {
     activeBorder("btnAdd")
 })
 // clicked border active code end here;
