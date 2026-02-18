@@ -102,12 +102,17 @@ casOutMoneyBtn.addEventListener("click", (e) => {
         date: new Date().toLocaleTimeString()
     }
     array.push(data)
-    // console.log(array);
-
-
     // Transaction history code end here;
 })
 // Cash Out input field code end here;
+
+// Transfer Money Input field code start hre;
+let transferMoneyBtn = document.getElementById("transferMoneyBtn");
+transferMoneyBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    console.log("transferMoneyBtn clicked now");
+})
+// Transfer Money Input field code end hre;
 
 // btn add toggoling code start here + btnAdd code:-
 let btnAdd = document.getElementById("btnAdd");
