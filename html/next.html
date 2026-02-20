@@ -63,7 +63,7 @@
             </div>
             <div id="btnPayBill" class="cardBtn border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
                 <img src="/assest/purse1.png" alt="" class="mx-auto mb-2">
-                <h3 class="roboto-font">Pay Bill</h3>
+                <h3 class="roboto-font">Transfer & Get Bonus History</h3>
             </div>
             <div id="btnTransactions"
                 class="cardBtn border-2 border-gray-300 text-center p-4 rounded-lg cursor-pointer">
@@ -155,8 +155,7 @@
             </div>
             <div>
                 <label for="">Reference</label> <br />
-                <input id="rCode" type="text"
-                    class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
+                <input id="rCode" type="text" class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
                     placeholder="Enter Reference Code" />
             </div>
             <div>
@@ -166,7 +165,7 @@
                     placeholder="Enter 4 digit pin number" />
             </div>
             <button type="button" id="transferMoneyBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white my-2 p-7">
-                 Money Transfer
+                Money Transfer
             </button>
         </form>
     </section>
@@ -174,31 +173,31 @@
     <section id="getBAll" style="display: none;" class="form2 max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
         <form class="form" id="getBonusForm">
             <h2 class="font-bold text-[20px] my-4">Get Bonus</h2>
-            <div>
+            <!-- <div>
                 <label for="">Agent Number </label> <br />
                 <input type="text" class="input w-full my-2 p-7 rounded-lg bg-[#f4f5f7] focus:outline-none"
                     id="agentNumber" placeholder="Enter 11 digit agent number" />
-            </div>
+            </div> -->
             <div>
-                <label for="">Amount</label> <br />
-                <input id="wAmount" type="text"
+                <label for="">Bonus Ammount</label> <br />
+                <input id="bAmount" type="text"
                     class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
                     placeholder="Enter amount to withdrew" />
             </div>
             <div>
                 <label for="">Pin Number</label> <br />
-                <input id="casPinNumber" type="text"
+                <input id="bPinNumber" type="text"
                     class="input bg-[#f4f5f7] rounded-2xl focus:outline-none w-full my-2 p-7"
                     placeholder="Enter 4 digit pin number" />
             </div>
-            <button type="button" id="casOutMoneyBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white my-2 p-7">
-                Withdraw Money
+            <button type="button" id="bonusAddBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white my-2 p-7">
+                Bonus Add
             </button>
         </form>
     </section>
     <!-- Pay Bill code star here -->
-    <section id="payBAll" style="display: none;" class="form2 max-w-lg mx-auto bg-white p-8 rounded-lg mt-8">
-        <form class="form" id="payBForm">
+    <section id="payBAll" style="display: none;" class="form2 max-w-lg mx-auto  p-8 rounded-lg mt-8">
+        <!-- <form class="form" id="payBForm">
             <h2 class="font-bold text-[20px] my-4">Pay Bill</h2>
             <div>
                 <label for="">Agent Number </label> <br />
@@ -220,8 +219,19 @@
             <button type="button" id="casOutMoneyBtn" class="btn w-full bg-[#0874f2] rounded-2xl text-white my-2 p-7">
                 Withdraw Money
             </button>
-        </form>
+        </form> -->
+        <div class="flex justify-between items-center bg-[#f4f5f7] mb-4 ">
+            <h2 class="roboto-font text-[20px]"> Transfer & Get Bonus History</h2>
+            <p class="text-gray">View All</p>
+        </div>
+        <div id="historyOfTandGbContainer">
+
+        </div>
+        <!-- history detials code end hre✅✅✅-->
+
+
     </section>
+
     <!-- Transactions code start here -->
     <section id="transAll" style="display: none;" class="form2 max-w-lg mx-auto  p-8 rounded-lg mt-4">
         <!-- history detials code start hre✅✅✅ -->
@@ -231,12 +241,15 @@
         </div>
 
         <div id="transactionContainer">
-           
+
         </div>
         <!-- history detials code end hre✅✅✅-->
     </section>
     <!-- next js file added -->
     <script src="/js/next.js"></script>
+
+
+
 
 </body>
 
